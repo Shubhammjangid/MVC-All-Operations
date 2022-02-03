@@ -1,0 +1,53 @@
+﻿@model WebApplication1.Models.Employee;
+@using System.Collections.Generic;
+
+
+@{
+
+	
+	List<Employee> PartialList = new List<Employee>();
+
+	Employee p1 = new Employee();
+
+	p1.Name = "Virat";
+	p1.Age=34;
+	p1.City = "Aurangabad";
+
+	Employee p2 = new Employee();
+	p2.Name = "EXample";
+	p2.Age = 23;
+	p2.City = "Laptop";
+
+	PartialList.Add(p1);
+	PartialList.Add(p2);
+}
+
+
+	
+	<br />
+
+
+	@foreach(var em in PartialList)
+	{
+		
+
+
+		<table>
+		  <tr>
+			<th>EmployeeDetail </th>
+		  </tr>
+		  <tr>
+			<td>Name - @em.Name</td>
+		  </tr>
+		  <tr>
+			<td> Age - @em.Age</td>
+		  </tr>
+		  <tr>
+			  <td>
+				  City - @em.City
+			  </td>
+		  </tr>
+	
+		</table>
+	}
+

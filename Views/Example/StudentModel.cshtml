@@ -1,0 +1,45 @@
+﻿@model WebApplication1.Models.listStudent;
+@using System.Collections.Generic;
+
+@{
+	listStudent list = new listStudent();
+	List<StudentDetail> ViewDetail = list.GetStudentDetails();
+
+
+
+}
+
+@foreach(var pep in ViewDetail)
+{
+	<p>@pep.studentName</p>
+	<p>@pep.studentId</p>
+	<p>@pep.studentStatus</p>
+	
+	
+}
+<button> <a class="nav-link text-dark" asp-area="" asp-controller="Example" asp-action="Res">Res</a></button>
+
+
+<br/>
+<h5>@ViewBag.MyFirstName</h5>
+
+@foreach(var pep in ViewBag.MyList)
+{
+	<ul>
+		<li>@pep</li>
+	</ul>
+}
+<div>
+	<br/>
+	<h4>This is view data</h4>
+	@foreach (var item in (List<int>) ViewData["Emply"])
+{
+	<ul>
+		<li>
+			<a href="#">@item</a>
+		</li>
+	</ul>
+}
+
+ <img src="~/ui.png" alt="Example.jpg" height=300px , width = 50/>
+</div>

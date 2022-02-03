@@ -1,0 +1,50 @@
+﻿@model WebApplication1.Models.Employee;
+@using System.Collections.Generic;
+@{
+	List<Employee> session = new List<Employee>();
+
+	Employee em1 = new Employee();
+	em1.Name = "Arjun";
+	em1.Age = 23;
+	em1.City = "Mumbai";
+
+	Employee em2 = new Employee();
+	em2.Name = "Karan";
+	em2.Age = 34;
+	em2.City = "Jaipur";
+
+	session.Add(em1);
+	session.Add(em2);
+}
+
+<div>
+	<br />
+	@foreach(var pep in session)
+	{
+		<table>
+		  <tr>
+			<th>EmployeeDetail</th>
+		  </tr>
+		  <tr>
+			<td>@pep.Name</td>
+		  </tr>
+		  <tr>
+			<td>@pep.Age</td>
+		  </tr>
+		  <tr>
+			  <td>
+				  @pep.City
+			  </td>
+		  </tr>
+		</table>
+	}
+</div>
+
+
+
+
+<div>
+	
+		@await Html.PartialAsync("_Partial")
+	
+</div>

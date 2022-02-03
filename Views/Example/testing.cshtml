@@ -1,0 +1,52 @@
+﻿@model WebApplication1.Models.Employee;
+
+
+
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Platform</th>
+      <th scope="col">Links</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Github</td>
+      <td><a href="https://github.com/Shubhammjangid">Click here</a></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Hackerrank</td>
+    <td><a href="https://www.hackerrank.com/Jangidshubham234">Click here</a></td>
+     
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Linkedin</td>
+      <td><a href="https://www.linkedin.com/in/shubham-jangid-037559208/">Click here</a></td>
+     
+    </tr>
+  </tbody>
+</table>
+
+
+
+<div>
+        <button type="button" class="btn btn-dark"> @Html.ActionLink("Home","Index","Home")</button>
+        
+</div>
+
+<div>
+
+   
+
+    @Html.DropDownList("Accounts",
+    new SelectList(Enum.GetValues(typeof(Accounts))),
+    "select account",
+    new{@class = "form-control"})
+    
+    
+</div>

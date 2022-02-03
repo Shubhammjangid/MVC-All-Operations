@@ -1,0 +1,18 @@
+﻿@model WebApplication1.Models.listStudent;
+@using System.Collections.Generic;
+
+@{
+	listStudent li = new listStudent();
+	List<StudentDetail> Res = li.GetStudentDetails();
+
+	foreach(var pep in Res)
+	{
+		<p>
+			Name - @pep.studentName
+			Id - @pep.studentId
+			REsult - @pep.studentStatus
+		</p>
+	}
+}
+
+<button class="btn btn-dark" type="button">@Html.ActionLink("Home","Index","Home")</button>
