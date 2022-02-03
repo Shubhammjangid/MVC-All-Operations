@@ -5,12 +5,16 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication1.Sevices;
 using WebApplication1.Models;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace WebApplication1.Controllers
 {
+   
     public class HomeController : Controller
     {
+       
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -44,7 +48,11 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index()
         {
+            
+       
             return View();
+            
+            
         }
 
         public IActionResult Privacy()

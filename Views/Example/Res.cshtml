@@ -1,5 +1,6 @@
 ﻿@model WebApplication1.Models.listStudent;
 @using System.Collections.Generic;
+@using WebApplication1.Sevices
 
 @{
 	listStudent li = new listStudent();
@@ -15,4 +16,4 @@
 	}
 }
 
-<button class="btn btn-dark" type="button">@Html.ActionLink("Home","Index","Home")</button>
+<button type="button" class="btn btn-dark"> @Html.ActionLink("Home","Index",new {id = Encrypt.EnryptString("Home".ToString())})</button>

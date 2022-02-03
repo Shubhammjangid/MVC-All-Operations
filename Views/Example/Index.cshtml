@@ -1,4 +1,5 @@
 ﻿@model WebApplication1.Models.Employee;
+@using WebApplication1.Sevices
 @using System.Collections.Generic;
 @{
 	List<Employee> session = new List<Employee>();
@@ -41,6 +42,7 @@
 </div>
 
 
+<button type="button" class="btn btn-dark"> @Html.ActionLink("Home","Testing",new {id = Encrypt.EnryptString("Example".ToString())})</button>
 
 
 <div>

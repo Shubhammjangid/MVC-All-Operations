@@ -1,17 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
 using System.Collections.Generic;
+using Microsoft.Extensions.Caching.Memory;
+using System;
 
 namespace WebApplication1.Controllers
 {
+    
     public class ExampleController : Controller
     {
+        
+
+
         public IActionResult Index()
         {
             var data = GetEmolpyee();
             return View(data);
         }
-
+        
         public Employee GetEmolpyee()
         {
             return new Employee()
@@ -35,13 +41,17 @@ namespace WebApplication1.Controllers
 
             ViewData["Emply"] = new List<int>(){1,2,3,4,5,6};
             return View();
+
+            
+
         }
 
         public IActionResult Res()
         {
             return View();
         }
+
        
-        
     }
+   
 }

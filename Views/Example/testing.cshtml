@@ -1,4 +1,5 @@
 ﻿@model WebApplication1.Models.Employee;
+@using WebApplication1.Sevices
 
 
 
@@ -35,7 +36,9 @@
 
 
 <div>
-        <button type="button" class="btn btn-dark"> @Html.ActionLink("Home","Index","Home")</button>
+        <button type="button" class="btn btn-dark"> @Html.ActionLink("Home","Index",new {id = Encrypt.EnryptString("Home".ToString())})</button>
+        <button type="button" class="btn btn-dark"> @Html.ActionLink("Example","Res",new {id = Encrypt.EnryptString("Example".ToString())})</button>
+
         
 </div>
 

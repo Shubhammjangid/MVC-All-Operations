@@ -1,4 +1,5 @@
-﻿@{
+﻿@using WebApplication1.Sevices
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -23,6 +24,7 @@
           <h3 class="mb-0">C# code</h3>
           <div class="mb-1 text-muted">Jan 14</div>
           <p class="card-text mb-auto">Made ATM system using c# concept like OOPS , list and control flow</p>
+          
           <a href="https://github.com/Shubhammjangid/ATM-System" class="stretched-link">Source code</a>
         </div>
         @* <div class="col-auto d-none d-lg-block">
@@ -80,8 +82,11 @@
 
 
   <div class="d-grid gap-2">
+           
   <button class="btn btn-dark" type="button">@Html.ActionLink("Accounts","Testing","Example")</button>
   <button class="btn btn-dark" type="button">@Html.ActionLink("Detail","Res","Example")</button>
+
+  
   
 </div>
 
